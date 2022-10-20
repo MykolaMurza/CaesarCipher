@@ -4,9 +4,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.*?>
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/19"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main">
-    <Button fx:id="cipher" layoutX="960.0" layoutY="494.0" mnemonicParsing="false" onAction="#cipher" prefHeight="105.0"
-            prefWidth="420.0" text="Шифрувати">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main" fx:id="pane">
+    <Button fx:id="cipher" defaultButton="true" layoutX="960.0" layoutY="494.0" mnemonicParsing="false"
+            onAction="#cipher" prefHeight="105.0" prefWidth="420.0" text="Шифрувати">
         <font>
             <Font name="Monospaced Regular" size="36.0"/>
         </font>
@@ -99,4 +99,17 @@
             <Font name="Monospaced Regular" size="18.0"/>
         </font>
     </Text>
+    <Button fx:id="themeBtn" layoutX="1704.0" layoutY="34.0" mnemonicParsing="false" onAction="#refreshTheme"
+            prefHeight="41.0" prefWidth="180.0" text="Нічна тема">
+        <font>
+            <Font name="Monospaced Regular" size="22.0"/>
+        </font>
+    </Button>
+    <Button fx:id="attackBtn" layoutX="1200.0" layoutY="34.0" mnemonicParsing="false" onAction="#attack"
+            prefHeight="105.0" prefWidth="420.0" style="-fx-background-color: red;" text="&gt;&gt; ATTACK &lt;&lt;"
+            visible="false">
+        <font>
+            <Font name="Monospaced Bold" size="36.0"/>
+        </font>
+    </Button>
 </AnchorPane>
