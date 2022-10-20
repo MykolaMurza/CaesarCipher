@@ -174,9 +174,11 @@ public class Main extends Application {
         LOG.info("РОЗПОЧАТО АТАКУ НА ШИФР!");
         String inputText = input.getText();
         output.setText("");
-        for (int i = 1; i < 26; i++) {
-            String curr = CaesarCipher.decipher(inputText, i, 1);
-            output.setText(output.getText() + "\n---\n" + curr);
+        for (int offset = 1; offset < 26; offset++) {
+            for (int cr = 1; cr < 10; cr++) {
+                String curr = CaesarCipher.decipher(inputText, offset, cr);
+                output.setText(output.getText() + "\n---\n" + curr);
+            }
         }
     }
 
